@@ -59,11 +59,11 @@ app.post('/api/notes', (req, res) => {
     req.body.id = notes.length.toString();
   
     // if any data in req.body is incorrect, send 400 error back
-    if (!validateAnimal(req.body)) {
-      res.status(400).send('The animal is not properly formatted.');
+    if (!validateNote(req.body)) {
+      res.status(400).send('The note is not properly formatted.');
     } else {
-      const animal = createNewAnimal(req.body, notes);
-      res.json(animal);
+      const note = createNewNote(req.body, notes);
+      res.json(note);
     }
   });
 
