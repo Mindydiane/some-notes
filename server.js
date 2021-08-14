@@ -1,3 +1,6 @@
+const apiRoutes = require('./routes/apiRoutes');
+const htmlRoutes = require('./routes/htmlRoutes');
+
 //import and use fs library
 const fs = require("fs");
 //built into the Node.js API
@@ -20,6 +23,10 @@ app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
 app.use(express.json());
 
+//tells server when /api is used get it from apiRoutes
+app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
+//tells server when / is used get it from htmlRoutes
 
 app.listen(PORT, () => {
   console.log(`API server now on port ${PORT}!`);
