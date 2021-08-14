@@ -4,6 +4,8 @@ const fs = require("fs");
 const path = require("path");
 // inauiring express 1st step
 const express = require("express");
+// import json to file
+const { notes } = require("./db/db");
 
 //tell our app to use that port
 const PORT = process.env.PORT || 3001;
@@ -18,43 +20,15 @@ app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
 app.use(express.json());
 
-function validateNote(note) {
-  if (!note.title) {
-    return false;
-  }
-  if (!note.text) {
-    return false;
-  }
-  return true;
-}
-
-function findById(id, notesArray) {
-  const result = notesArray.filter((note) => note.id === id)[0];
-  return result;
-}
-
-function createNewNote(body, notesArray) {
-  console.log(note);
-  // our function's main code will go here!
-  const note = body;
-  notesArray.push(note);
-  fs.writeFileSync(
-    path.join(__dirname, "./db/db.json"),
-    JSON.stringify({ notes: notesArray }, null, 2)
-  );
-  // return finished code to post route for response
-  return note;
-}
-
-// //add a route, get method requires two arguements
-// app.get("/api/notes", (req, res) => {
-//     let results = notes;
-//     if (req.query) {
-//       results = filterByQuery(req.query, results);
-//     }
-//     console.log(results);
-//     res.json(results);
-//   });
+//add a route, get method requires two arguements
+app.get("/api/notes", (req, res) => {
+    let results = notes;
+    if (req.query) {
+      results = filterByQuery(req.query, results);
+    }
+    console.log(results);
+    res.json(results);
+  });
 
 //get a new route for notes by id
 app.get("/api/notes/:id", (req, res) => {
@@ -70,7 +44,8 @@ app.get("/api/notes/:id", (req, res) => {
 // post or create notes
 app.post("/api/notes", (req, res) => {
   // set id based on what the next index of the array will be
-  req.body.id = notes.length.toString();
+  //   req.body.id = notes.length.toString();
+  console.log(notes);
 
   // if any data in req.body is incorrect, send 400 error back
   if (!validateNote(req.body)) {
