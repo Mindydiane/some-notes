@@ -5,7 +5,7 @@ const htmlRoutes = require('./routes/htmlRoutes');
 const fs = require("fs");
 //built into the Node.js API
 const path = require("path");
-// inauiring express 1st step
+// inquiring express 1st step
 const express = require("express");
 // import json to file
 const { notes } = require("./db/db");
