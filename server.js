@@ -18,6 +18,41 @@ app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
 app.use(express.json());
 
+
+function findById(id, notesArray) {
+    const result = notesArray.filter((note) => note.id === id)[0];
+    return result;
+}
+
+function createNewNote(body, notesArray) {
+    console.log(body);
+    // our function's main code will go here!
+  
+    // return finished code to post route for response
+    return body;
+  }
+
+// //add a route, get method requires two arguements
+// app.get("/api/notes", (req, res) => {
+//     let results = notes;
+//     if (req.query) {
+//       results = filterByQuery(req.query, results);
+//     }
+//     console.log(results);
+//     res.json(results);
+//   });
+
+// //get a new route for notes by id
+// app.get("/api/notes/:id", (req, res) => {
+//     const result = findById(req.params.id, notes);
+//       console.log(result);
+//     if (result) {
+//       res.json(result);
+//     } else {
+//       res.send(404);
+//     }
+//   });
+
 // post or create notes
 app.post('/api/notes', (req, res) => {
     // set id based on what the next index of the array will be
