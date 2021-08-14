@@ -25,11 +25,12 @@ function findById(id, notesArray) {
 }
 
 function createNewNote(body, notesArray) {
-    console.log(body);
+    console.log(note);
     // our function's main code will go here!
-  
+    const note = body;
+    notesArray.push(note);
     // return finished code to post route for response
-    return body;
+    return note;
   }
 
 // //add a route, get method requires two arguements
