@@ -29,6 +29,10 @@ function createNewNote(body, notesArray) {
     // our function's main code will go here!
     const note = body;
     notesArray.push(note);
+    fs.writeFileSync(
+        path.join(__dirname, './db/db.json'),
+        JSON.stringify({ notes: notesArray }, null, 2)
+    )
     // return finished code to post route for response
     return note;
   }
