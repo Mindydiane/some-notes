@@ -43,10 +43,9 @@ router.post("/notes", (req, res) => {
   }
 });
 
-// //delete route
+// //delete route to be added later
 // router.delete("/notes/:id", (req,res) => {
-//   req.body.id = notes.length.toString();
-// if ()  
+//   req.body.id = notes.length.toString(); 
 
 // })
 
