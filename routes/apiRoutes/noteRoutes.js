@@ -43,4 +43,11 @@ router.post("/notes", (req, res) => {
   }
 });
 
+// //delete route
+// router.delete("/notes/:id", (req,res) => {
+//   req.body.id = notes.length.toString();
+// if ()  
+
+// })
+
 module.exports = router;
