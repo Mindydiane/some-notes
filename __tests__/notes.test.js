@@ -5,8 +5,8 @@ const {
   createNewNote,
   validateNote,
 } = require("../lib/notes");
-const { notes } = require("../data/animals");
-const { TestWatcher } = require("jest");
+const { notes } = require("../data/notes");
+const { test } = require("jest");
 
 //test out without effecting json file
 jest.mock("fs");
