@@ -11,8 +11,10 @@
 - Once both places are filled out it gives a save option on the top right
 - If left side is selected and want to fill out a new note press on + on the top right
 
-
-
 ## Heroku deployed app
 https://some-notess.herokuapp.com/
+
+## walkthrough video
+![some notes taker (3)](https://user-images.githubusercontent.com/80286982/129501226-d7c8cd7b-499f-4b87-b90e-e60f34fc0bdc.gif)
+
 
