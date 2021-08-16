@@ -9,7 +9,7 @@
 - Then it presents all past notes on left
 - On right side it gives option to fill out Note title and text
 - Once both places are filled out, it gives a save option on the top right
-- If left side is selected press on top right + to get a empty field to enter a new note
+- If left side is selected press on top right + to get an empty field to enter a new note
 
 ## Heroku deployed app
 https://some-notess.herokuapp.com/
