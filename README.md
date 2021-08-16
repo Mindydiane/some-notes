@@ -1,15 +1,15 @@
-# some-notes
+# some-notes :notes:  ⏩ ⏩  ⏩  ⏩  
 
 ![some-notess herokuapp com_notes (3)](https://user-images.githubusercontent.com/80286982/129497722-a853399e-6c0c-418a-8363-f61bc0ac9c4a.png)
 
-# A fast easy way to write and keep track of notes.
+# A fast easy way to write and keep track of notes. :shipit: 🔍
 
-- At first it gives an option to Take notes with Express
-- Get started button is clicked
-- Then it presents all past notes on left
-- On right side it gives option to fill out Note title and text
-- Once both places are filled out, it gives a save option on the top right
-- If left side is selected press on top right + to get an empty field to enter a new note
+- At first it gives an option to Take notes with Express 🔆
+- Get started button is clicked 📳
+- Then it presents all past notes on left 🗨️
+- On right side it gives option to fill out Note title and text 🗯️
+- Once both places are filled out, it gives a save option on the top right ✔️
+- If left side is selected press on top right + to get an empty field to enter a new note ➕
 
 ## Heroku deployed app
 https://some-notess.herokuapp.com/
